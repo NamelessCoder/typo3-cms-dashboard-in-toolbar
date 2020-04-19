@@ -1,0 +1,28 @@
+{
+    "name": "namelesscoder/dashboard-in-toolbar",
+    "description": "Moves the Dashboard module to toolbar",
+    "type": "typo3-cms-extension",
+    "homepage": "https://namelesscoder.net",
+    "license": "GPL-2.0+",
+    "prefer-stable": true,
+    "minimum-stability": "dev",
+    "support": {
+        "issues": "https://github.com/NamelessCoder/typo3-cms-dashboard-in-toolbar/issues"
+    },
+    "autoload": {
+        "psr-4": {
+            "NamelessCoder\\DashboardInToolbar\\": "Classes/"
+        }
+    },
+    "require": {
+        "php": "^7.1.0",
+        "typo3/cms-core": "^10.3 || dev-master",
+        "typo3/cms-backend": "^10.3 || dev-master",
+        "typo3/cms-dashboard": "^10.3 || dev-master"
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "dashboard_in_toolbar"
+        }
+    }
+}

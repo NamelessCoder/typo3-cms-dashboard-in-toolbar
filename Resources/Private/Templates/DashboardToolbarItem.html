@@ -1,0 +1,8 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:core="http://typo3.org/ns/TYPO3/CMS/Core/ViewHelpers" xmlns:be="http://typo3.org/ns/TYPO3/CMS/Backend/ViewHelpers" data-namespace-typo3-fluid="true">
+<span id="dashboard_dashboard">
+    <a href="javascript:;" class="toolbar-item-link dashboard-toolbar-item" onclick="TYPO3.Backend.NavigationContainer.hide(); TYPO3.Backend.ContentContainer.setUrl('{be:moduleLink(route: 'dashboard')}');">
+        <span class="toolbar-item-icon" title="{f:translate(key: 'title', extensionName: 'dashboard')}"><core:icon identifier="dashboard-toolbar-item" size="small" alternativeMarkupIdentifier="inline" /></span>
+        <span class="toolbar-item-name"><f:translate key="title" extensionName="dashboard"/></span>
+    </a>
+</span>
+</html>
