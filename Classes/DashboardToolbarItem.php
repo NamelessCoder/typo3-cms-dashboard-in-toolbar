@@ -21,6 +21,14 @@ use TYPO3\CMS\Fluid\View\StandaloneView;
 
 class DashboardToolbarItem implements ToolbarItemInterface
 {
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $pageRenderer = $this->getPageRenderer();
+        $pageRenderer->addJsFooterInlineCode('dashboard-toolbar-item', 'define(["require","exports","jquery","TYPO3/CMS/Backend/ModuleMenu"],(function(e,i,t,o){"use strict";return new class{constructor(){this.selector=".toolbar-item-dashboard-link",t(()=>{this.initialize()})}initialize(){t(document).on("click",this.selector,e=>{o.App.showModule("dashboard_dashboard")})}}}));');
+    }
 
     /**
      * @inheritDoc
@@ -78,7 +86,6 @@ class DashboardToolbarItem implements ToolbarItemInterface
      */
     protected function getFluidTemplateObject(string $filename): StandaloneView
     {
-        /** @var StandaloneView $view */
         $view = GeneralUtility::makeInstance(StandaloneView::class);
         $view->setLayoutRootPaths(['EXT:dashboard/Resources/Private/Layouts']);
         $view->setPartialRootPaths(['EXT:dashboard/Resources/Private/Partials/ToolbarItems']);
