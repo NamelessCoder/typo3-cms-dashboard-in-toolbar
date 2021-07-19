@@ -1,0 +1,3 @@
+
+# hide in main menu
+options.hideModules := addToList(dashboard)
