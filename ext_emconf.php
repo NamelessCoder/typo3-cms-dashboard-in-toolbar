@@ -26,7 +26,7 @@ $EM_CONF['dashboard_in_toolbar'] = [
     'depends' => 
     [
       'typo3' => '10.3.99-11.5.99',
-      'php' => '7.1.0-7.4.99',
+      'php' => '7.1.0-8.1.99',
     ],
     'conflicts' => 
     [
