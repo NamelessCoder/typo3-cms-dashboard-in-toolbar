@@ -9,8 +9,9 @@
         ['source' => 'EXT:dashboard_in_toolbar/Resources/Public/Icons/DashboardToolbarItem.svg']
     );
 
-    if ($GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUC']['startModule'] === 'dashboard') {
-        unset($GLOBALS['TYPO3_CONF_VARS']['BE']['defaultUC']['startModule']);
-    }
+
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:dashboard_in_toolbar/Configuration/TsConfig/User/HideDashboard.tsconfig">');
+
+
 })();
 

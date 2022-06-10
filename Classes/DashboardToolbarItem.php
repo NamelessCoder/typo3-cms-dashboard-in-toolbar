@@ -26,8 +26,6 @@ class DashboardToolbarItem implements ToolbarItemInterface
      */
     public function __construct()
     {
-        $pageRenderer = $this->getPageRenderer();
-        $pageRenderer->addJsFooterInlineCode('dashboard-toolbar-item', 'define(["require","exports","jquery","TYPO3/CMS/Backend/ModuleMenu"],(function(e,i,t,o){"use strict";return new class{constructor(){this.selector=".toolbar-item-dashboard-link",t(()=>{this.initialize()})}initialize(){t(document).on("click",this.selector,e=>{o.App.showModule("dashboard_dashboard")})}}}));');
     }
 
     /**
